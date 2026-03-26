@@ -15,7 +15,7 @@ export default function LoginPage() {
     setError(""); 
 
     try {
-      const res = await fetch("http://localhost:5000/api/login", {
+      const res = await fetch("https://vault-digital-bank.onrender.com/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),

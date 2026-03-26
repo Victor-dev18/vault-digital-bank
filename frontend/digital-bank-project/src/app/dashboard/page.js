@@ -28,10 +28,10 @@ export default function DashboardPage() {
     }
 
     try {
-      const balanceRes = await fetch("http://localhost:5000/api/balance", {
+      const balanceRes = await fetch("https://vault-digital-bank.onrender.com/api/balance", {
         headers: { Authorization: `Bearer ${token}` },
       });
-      const txRes = await fetch("http://localhost:5000/api/transactions", {
+      const txRes = await fetch("https://vault-digital-bank.onrender.com/api/transactions", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -59,7 +59,7 @@ export default function DashboardPage() {
     const token = localStorage.getItem("token");
 
     try {
-      const res = await fetch("http://localhost:5000/api/transfer", {
+      const res = await fetch("https://vault-digital-bank.onrender.com/api/transfer", {
         method: "POST",
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
         body: JSON.stringify({ receiverEmail, amount: Number(transferAmount) }),
@@ -86,7 +86,7 @@ export default function DashboardPage() {
     const token = localStorage.getItem("token");
 
     try {
-      const res = await fetch("http://localhost:5000/api/deposit", {
+      const res = await fetch("https://vault-digital-bank.onrender.com/api/deposit", {
         method: "POST",
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
         body: JSON.stringify({ amount: Number(topUpAmount) }),

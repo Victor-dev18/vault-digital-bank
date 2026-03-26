@@ -98,7 +98,7 @@ npm run dev
 ### 4. Access the Application
 
 * User Dashboard: [http://localhost:3000](http://localhost:3000)
-* Backend API: [http://localhost:5000](http://localhost:5000)
+* Backend API: [https://vault-digital-bank.onrender.com](https://vault-digital-bank.onrender.com)
 
 ---
 

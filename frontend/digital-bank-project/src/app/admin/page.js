@@ -19,7 +19,7 @@ export default function AdminDashboard() {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/admin/flagged", {
+      const res = await fetch("https://vault-digital-bank.onrender.com/api/admin/flagged", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -48,7 +48,7 @@ export default function AdminDashboard() {
   const handleToggleFreeze = async (userId) => {
     const token = localStorage.getItem("token");
     try {
-      const res = await fetch(`http://localhost:5000/api/admin/block/${userId}`, {
+      const res = await fetch(`https://vault-digital-bank.onrender.com/api/admin/block/${userId}`, {
         method: "PUT",
         headers: { Authorization: `Bearer ${token}` },
       });
